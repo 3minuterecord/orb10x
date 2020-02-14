@@ -1,0 +1,12 @@
+name: orb10x
+title: orb10x
+username:
+account: orb10x
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1812745
+bundleId: 2801140
+url: https://orb10x.shinyapps.io/orb10x/
+when: 1581693935.65187
+asMultiple: FALSE
+asStatic: FALSE
