@@ -200,7 +200,16 @@
   color:#cccccce0;
 }
 
-.nudge-right {
+.description-text-box{
+  width: 500px;
+  margin:10px;
+  font-weight:200;
+  font-size:13px;
+}
+
+.person-pic {
+  margin-top:10px;
+  margin-bottom:15px;
   margin-left:15px;
 }
 
@@ -312,6 +321,11 @@ div.dataTables_scrollBody>table {
     border-bottom: 1px Solid #F4F4F4 !important; 
     
 } 
+
+.flyer-box{
+  height:860px;
+  margin-bottom:10px;
+}
 
 .sliderPanel {
   display: inline-block;
@@ -470,6 +484,19 @@ div.dataTables_scrollBody>table {
   min-height: 35px;
   font-size: 34px;
   font-weight: 800;
+}
+
+.heading01{
+  font-weight:800;
+  font-size:24px;
+  font-family:'Archivo Black', arial, sans-serif;
+  margin-left:10px;
+}
+
+.slideImagebox {
+  height:290px;
+  margin:10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .bigImagebox {
