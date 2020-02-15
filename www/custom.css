@@ -315,7 +315,7 @@ div.dataTables_scrollBody>table {
 
 .sliderPanel {
   display: inline-block;
-  vertical-align:middle;
+  vertical-align:top;
 }
 
 /* value boxes custom wood colors */
@@ -470,6 +470,15 @@ div.dataTables_scrollBody>table {
   min-height: 35px;
   font-size: 34px;
   font-weight: 800;
+}
+
+.bigImagebox {
+  width:600px;
+  margin-top:10px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .combo-box {
