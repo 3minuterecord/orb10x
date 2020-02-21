@@ -53,7 +53,7 @@ body <- dashboardBody(
           ), style = "margin:15px;"
         ),
         div(
-          div("Training", span("", style = "font-size:13px;font-weight:300;font-family:Calibri,sans-serif;"), class = "body-heading"),
+          div("Training", span("", class = "heading-note"), class = "body-heading"),
           div(trainingDescription, class = "text-description"),
           div(
             div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
@@ -86,14 +86,14 @@ body <- dashboardBody(
             div("Graphic design for slides, infographics & app UIs", class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
-      ), div("end of page", style = "color:#282923;"), 
-      class = "sidebar-float"
+      ), div("end of page", style = "color:#282923;"), class = "sidebar-float"
     ), class="wrap"
   ),
   div(
     div(
+      div("CAREER TIMELINE", span("(hover over blocks for details...)", class = "heading-note"), class = "heading01"),
       div(
-        plotlyOutput("careerTimeline", width = "95%", height = '120px')
+        plotlyOutput("careerTimeline", width = "95%", height = '125px')
       ),
       div(
         div("SLIDE DESIGN", class = "heading01"),

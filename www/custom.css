@@ -5,6 +5,10 @@ wrap  {
   width: 100%;
 }
 
+.body {
+  background-color: #ECF0F5 !important;
+}
+
 .wrap .inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -40,9 +44,15 @@ input:hover {
   cursor: pointer;
 }
 
-
 .content{
   padding:20px;
+}
+
+.heading-note {
+  font-size:13px;
+  font-weight:300;
+  font-family:Calibri,
+  sans-serif;
 }
 
 .buttonClass {
@@ -188,12 +198,7 @@ input:hover {
 .hovertext text {
     font-size: 12px !important;
     font-family:Calibri,sans-serif !important;
-    background-color:#272822 !important;
 }
-
-.hoverlabel {
-    background-color:#272822 !important;
-  }
 
 .skin-green .sidebar-menu>li.active>a, .skin-green .sidebar-menu>li:hover>a {
   color: #ECF0F5;

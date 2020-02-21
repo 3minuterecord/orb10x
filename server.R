@@ -117,7 +117,7 @@ shinyServer(function(input, output, session) {
     ) %>% add_text(
       x = axisStart,
       y = 1.018,
-      text = "Graduated University",
+      text = "Graduated University, TUD/DIT (Ireland)",
       textposition = 'bottom right',
       textfont = list(color = mainMarkerColor, size = textSize),
       type = 'scatter',
@@ -125,7 +125,7 @@ shinyServer(function(input, output, session) {
     ) %>% add_text(
       x = axisStart,
       y = 1.023,
-      text = "<b>Career Timeline</b>",
+      text = "<b>Start</b>",
       textposition = 'bottom right',
       textfont = list(color = darkMarkerColor, size = textSize),
       type = 'scatter',
@@ -157,7 +157,7 @@ shinyServer(function(input, output, session) {
     ) %>% layout(
       plot_bgcolor='#ECF0F5',
       paper_bgcolor='#ECF0F5',
-      margin = list(l = 30, t = 0, b = 0, pad = 0),
+      margin = list(l = 30, t = 5, b = 0, pad = 0),
       font = list(size = 10),
       xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE, range = c(axisStart, axisEnder)),
       yaxis = list(title = (""), zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE),
