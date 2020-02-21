@@ -1,6 +1,13 @@
 library(shinydashboard)
 
-penPicture <- "I'm currently Head of Data Science for Wood and Analytics Manager for Wood Ireland.  I have a Bachelor of Science degree and Diploma in Structural Engineering from Technology University Dublin. I have over 20 years experience in delivery of engineering, technology and data projects.  In the last 5 years, I have specialized in data science, managing Wood's centre of excellence for data analytics (located in Ireland) and delivering a wide range of AI & analytics projects across multiple industries and business functions."
+penPicture <- "I'm currently Head of Data Science for Wood and Analytics Manager for Wood Ireland.  
+I have a Bachelor of Science degree and Diploma in Structural Engineering from Technology University Dublin. 
+I have over 20 years experience in delivery of engineering, technology and data projects.  In the last 5 years, 
+I have specialized in data science, managing Wood's centre of excellence for data analytics (located in Ireland) 
+and delivering a wide range of AI & analytics projects across multiple industries and business functions."
+
+trainingDescription <- "Training courses in Data-driven techniques, tools & strategies
+delivered to teams sizes up to 15 people over 1-2 days designed to transform working practices."
 
 header <- dashboardHeader(title = "www.ORB10X.com", titleWidth = 220)
 
@@ -46,19 +53,47 @@ body <- dashboardBody(
           ), style = "margin:15px;"
         ),
         div(
-          div("Training", span(" in Data Analytics & Machine Learning", style = "font-size:13px;font-weight:300;font-family:Calibri,sans-serif;"), class = "body-heading"),
+          div("Training", span("", style = "font-size:13px;font-weight:300;font-family:Calibri,sans-serif;"), class = "body-heading"),
+          div(trainingDescription, class = "text-description"),
           div(
-            div(img(src="orb10x_Long_White.svg", height = 30), class="logo-image")
+            div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
           ), style = "margin:15px;"
-        )
-      ), br(), br(), br(), br(), br(), 
+        ),
+        div(
+          div("Strengths", class = "body-heading"),
+          div(
+            div(icon("r-project"), class = "contact-icon  slider-middle"), 
+            div("R programming & Shiny app development", class = "contact-text  slider-middle")
+          ),
+          div(
+            div(icon("database"), class = "contact-icon slider-middle" ), 
+            div("Data strategy & information architecture", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("magic"), class = "contact-icon slider-middle" ), 
+            div("Machine learning & delivery of AI solutions", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("tasks"), class = "contact-icon slider-middle" ), 
+            div("Project & delivery management", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("puzzle-piece"), class = "contact-icon slider-middle" ), 
+            div("Engineering, mathematics & problem solving", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("pencil"), class = "contact-icon slider-middle" ), 
+            div("Graphic design for slides, infographics & app UIs", class = "contact-text slider-middle")
+          ), style = "margin:15px;"
+        ),
+      ), div("end of page", style = "color:#282923;"), 
       class = "sidebar-float"
     ), class="wrap"
   ),
   div(
     div(
       div(
-        plotlyOutput("careerTimeline", width = "90%", height = '120px')
+        plotlyOutput("careerTimeline", width = "95%", height = '120px')
       ),
       div(
         div("SLIDE DESIGN", class = "heading01"),
@@ -72,9 +107,11 @@ body <- dashboardBody(
         style = "width:100%;margin-left:15px;"
         )
       ), class = 'main-wrap'
-    ), class = 'main'
+    ), 
+    div("end of info", style = "color:#ECF0F5;"), class = 'main'
   ),
   # TODO -- Figure out styling bug for bottom of page when below is removed
+  br(),
   div("end of page", style = "color:#ECF0F5;")
 )
 
