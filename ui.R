@@ -1,5 +1,8 @@
 library(shinydashboard)
 
+projects <- read.csv("data/projectsData.csv", stringsAsFactors = FALSE)
+names(projects)[1] <- "Name"
+
 penPicture <- "I'm currently Head of Data Science for Wood and Analytics Manager for Wood Ireland.  
 I have a Bachelor of Science degree and Diploma in Structural Engineering from Technology University Dublin. 
 I have over 20 years experience in delivery of engineering, technology and data projects.  In the last 5 years, 
@@ -16,7 +19,9 @@ sidebar <- dashboardSidebar(disable = TRUE)
 body <- dashboardBody(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
-    tags$link(href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap")
+    tags$link(href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap"),
+    tags$link(href="https://fonts.googleapis.com/css?family=Archivo&display=swap"),
+    tags$script(src="https://kit.fontawesome.com/bb5623bc1e.js", crossorigin="anonymous") # fontawesome pro license
   ),
   tags$style(rel = "stylesheet", type = "text/css", href = "custom.css"),
   div(
@@ -59,6 +64,23 @@ body <- dashboardBody(
             div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
           ), style = "margin:15px;"
         ),
+        br(),
+        div(
+          div("Favourite Resources", class = "body-heading"),
+          div(
+            div(icon("fal fa-book"), class = "contact-icon  slider-middle"), 
+            div(span("Book: ", style = "color:#EBCA48;"), "Machine Learning for Predictive Analytics", class = "contact-text  slider-middle")
+          ),
+          div(
+            div(icon("fal fa-file-audio"), class = "contact-icon slider-middle" ), 
+            div(span("Audiobook: ", style = "color:#EBCA48;"), "Data Science, J. Kelleher & B. Tierney", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("fal fa-podcast"), class = "contact-icon slider-middle" ), 
+            div(span("Podcast: ", style = "color:#EBCA48;"), "Linear Digressions", class = "contact-text slider-middle")
+          ), style = "margin:15px;"
+        ),
+        br(),
         div(
           div("Strengths", class = "body-heading"),
           div(
@@ -86,17 +108,82 @@ body <- dashboardBody(
             div("Graphic design for slides, infographics & app UIs", class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
+        br(),
+        div(
+          div("INTERESTS", class = "body-heading"),
+          div(
+            div(icon("fas fa-running"), class = "contact-icon  slider-middle"), 
+            div("Running trails, hills & mountains", class = "contact-text  slider-middle")
+          ),
+          div(
+            div(icon("fal fa-guitar-electric"), class = "contact-icon slider-middle" ), 
+            div("Playing guitar & listening to music", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("far fa-film"), class = "contact-icon slider-middle" ), 
+            div("Movies, documentaries & boxsets", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("fal fa-dog-leashed"), class = "contact-icon slider-middle" ), 
+            div("Walking my dog in the woods", class = "contact-text slider-middle")
+          ),
+          div(
+            div(icon("fal fa-child"), class = "contact-icon slider-middle" ), 
+            div("Raising my children", class = "contact-text slider-middle")
+          ), style = "margin:15px;"
+        ),
       ), div("end of page", style = "color:#282923;"), class = "sidebar-float"
     ), class="wrap"
   ),
   div(
     div(
-      div("CAREER TIMELINE", span("(hover over blocks for details...)", class = "heading-note"), class = "heading01"),
+      div("MILESTONES", span("(hover over blocks for details...)", class = "heading-note"), class = "heading01"),
       div(
         plotlyOutput("careerTimeline", width = "95%", height = '125px')
       ),
+      div("RECENT PROJECTS", span("(selection)", class = "heading-note"), class = "heading01"),
       div(
-        div("SLIDE DESIGN", class = "heading01"),
+        div(
+          div(projects$Name[1], class = "box-heading01"), 
+          div(projects$Description[1], class = "box-description"),
+          div(projects$Status[1], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        div(
+          div(projects$Name[2], class = "box-heading01"), 
+          div(projects$Description[2], class = "box-description"),
+          div(projects$Status[2], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        div(
+          div(projects$Name[3], class = "box-heading01"), 
+          div(projects$Description[3], class = "box-description"),
+          div(projects$Status[3], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        div(
+          div(projects$Name[4], class = "box-heading01"), 
+          div(projects$Description[4], class = "box-description"),
+          div(projects$Status[4], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        div(
+          div(projects$Name[5], class = "box-heading01"), 
+          div(projects$Description[5], class = "box-description"),
+          div(projects$Status[5], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        div(
+          div(projects$Name[6], class = "box-heading01"), 
+          div(projects$Description[6], class = "box-description"),
+          div(projects$Status[6], class = "box-heading01"), 
+          class = "project-box sliderPanel"
+        ),
+        style = "margin-left:15px;"
+        ),
+      br(),
+      div(
+        div("SAMPLE SLIDES", class = "heading01"),
         div(
           imageOutput("slideImage01", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage02", width = "100%", height = "290px", inline = TRUE),

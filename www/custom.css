@@ -44,6 +44,46 @@ input:hover {
   cursor: pointer;
 }
 
+.project-box {
+  background: repeating-radial-gradient(
+    circle,
+    #282923,
+    #282923 40px,
+    #201F1A 40px, 
+    #201F1A 80px
+  );
+  color:#282923;
+  height:170px;
+  width:415px;
+  margin:10px;
+  padding:10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-box:after {
+  position: absolute;
+  color:#FFFFFF;
+  font-size:50;
+  font-family: 'FontAwesome';
+  top: 0;
+  left: 10px;
+  content: "\f005";
+}
+
+.box-heading01 {
+  font-size:13px;
+  letter-spacing: 0.1em;
+  font-weight:800;
+  color:#EBCA48;
+}
+
+.box-description {
+  font-size:12px;
+  font-weight:200;
+  color:#FFFFFF;
+  margin-bottom:5px;
+}
+
 .content{
   padding:20px;
 }
@@ -196,8 +236,8 @@ input:hover {
 }
 
 .hovertext text {
-    font-size: 12px !important;
-    font-family:Calibri,sans-serif !important;
+  font-size: 12px !important;
+  font-family:Calibri,sans-serif !important;
 }
 
 .skin-green .sidebar-menu>li.active>a, .skin-green .sidebar-menu>li:hover>a {
