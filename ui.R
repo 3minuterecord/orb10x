@@ -1,4 +1,5 @@
 library(shinydashboard)
+source('global.R')
 
 projects <- read.csv("data/projectsData.csv", stringsAsFactors = FALSE)
 names(projects)[1] <- "Name"
@@ -21,7 +22,7 @@ body <- dashboardBody(
     tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
     tags$link(href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap"),
     tags$link(href="https://fonts.googleapis.com/css?family=Archivo&display=swap"),
-    tags$script(src="https://kit.fontawesome.com/bb5623bc1e.js", crossorigin="anonymous") # fontawesome pro license
+    tags$script(src=paste0("https://kit.fontawesome.com/", password_config$password, ".js"), crossorigin="anonymous") # fontawesome pro license
   ),
   tags$style(rel = "stylesheet", type = "text/css", href = "custom.css"),
   div(
