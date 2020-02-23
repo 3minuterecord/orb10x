@@ -5,10 +5,6 @@ wrap  {
   width: 100%;
 }
 
-.body {
-  background-color: #ECF0F5 !important;
-}
-
 .wrap .inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -45,6 +41,7 @@ input:hover {
 }
 
 .project-box {
+  border-left: 5px solid #E6E6E6;
   background: repeating-radial-gradient(
     circle,
     #282923,
@@ -52,7 +49,6 @@ input:hover {
     #201F1A 40px, 
     #201F1A 80px
   );
-  color:#282923;
   height:170px;
   width:415px;
   margin:10px;
@@ -67,7 +63,6 @@ input:hover {
   font-family: 'FontAwesome';
   top: 0;
   left: 10px;
-  content: "\f005";
 }
 
 .box-heading01 {
@@ -254,7 +249,13 @@ input:hover {
 }
 
 .skin-green .main-header .logo {
-    background-color: #282923;
+    background: repeating-radial-gradient(
+    circle,
+    #282923,
+    #282923 40px,
+    #201F1A 40px, 
+    #201F1A 80px
+  );
     color:#EBCA48;
 }
 

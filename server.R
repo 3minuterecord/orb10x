@@ -50,6 +50,20 @@ shinyServer(function(input, output, session) {
          alt = "Orb10x Flyer")
   }, deleteFile = FALSE,)
   
+  output$slideImage07 <- renderImage({
+    list(src="www/slide_IDE.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage08 <- renderImage({
+    list(src="www/slide_AI.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
   # Read in timeline data
   timelineData <- reactive({
     data <- read.csv("data/timelineData.csv", stringsAsFactors = FALSE)
