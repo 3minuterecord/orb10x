@@ -10,6 +10,8 @@ I have over 20 years experience in delivery of engineering, technology and data 
 I have specialized in data science, managing Wood's centre of excellence for data analytics (located in Ireland) 
 and delivering a wide range of AI & analytics projects across multiple industries and business functions."
 
+myCurrentRole <- "Data Science Manager"
+
 trainingDescription <- "Training courses in Data-driven techniques, tools & strategies
 delivered to teams sizes up to 15 people over 1-2 days designed to transform working practices."
 
@@ -28,17 +30,20 @@ body <- dashboardBody(
   div(
     div(
       div(
-        div(img(src="jason_circle.png", height="140px"), class = "sliderPanel person-pic"),
+        div(img(src="my_circle_pic.png", height="140px"), class = "sliderPanel person-pic"),
         div(
           div("Jason Payne", class = "person-name"),
-          div("Data Science Manager", class = "person-role"),
+          div(myCurrentRole, class = "person-role"),
           class = "sliderPanel"
         ),
         div(
           div("About Me", class = "body-heading"),
           div(penPicture, class = "text-description"),
-          style = "border-left:3px solid #F2F2F2;margin-left:35px;margin-top:40px;"
+          class = "pen-picture-box"
         ),
+        # ---------------------------------------------------------------------+
+        # Contact information & content links                                  |
+        # ---------------------------------------------------------------------+
         div(
           div("Contact Me", class = "body-heading"),
           div(
@@ -66,6 +71,9 @@ body <- dashboardBody(
           ), style = "margin:15px;"
         ),
         br(),
+        # ---------------------------------------------------------------------+
+        # Add a section on favourite resources, e.g. books, podcasts, websites |
+        # ---------------------------------------------------------------------+
         div(
           div("Favourite Resources", class = "body-heading"),
           div(
@@ -106,6 +114,9 @@ body <- dashboardBody(
           ), style = "margin:15px;"
         ),
         br(),
+        # ---------------------------------------------------------------------+
+        # Add a section on personal strengths                                  |
+        # ---------------------------------------------------------------------+
         div(
           div("Strengths", class = "body-heading"),
           div(
@@ -134,6 +145,9 @@ body <- dashboardBody(
           ), style = "margin:15px;"
         ),
         br(),
+        # ---------------------------------------------------------------------+
+        # Add a section on personal interests                                  |
+        # ---------------------------------------------------------------------+
         div(
           div("Interests", class = "body-heading"),
           div(
@@ -162,10 +176,16 @@ body <- dashboardBody(
   ),
   div(
     div(
+      # ---------------------------------------------------------------------+
+      # Career milestone timeline                                            |
+      # ---------------------------------------------------------------------+
       div("MILESTONES", span("(hover over blocks for details...)", class = "heading-note"), class = "heading01"),
       div(
         plotlyOutput("careerTimeline", width = "95%", height = '125px')
       ),
+      # ---------------------------------------------------------------------+
+      # Recent Projects of Interest tiles / boxes                            |
+      # ---------------------------------------------------------------------+
       div("RECENT PROJECTS", span("(selection)", class = "heading-note"), class = "heading01"),
       div(
         div(
@@ -207,6 +227,9 @@ body <- dashboardBody(
         style = "margin-left:15px;"
         ),
       br(),
+      # ---------------------------------------------------------------------+
+      # Sample slides / content                                              |
+      # ---------------------------------------------------------------------+
       div(
         div("SAMPLE SLIDES", class = "heading01"),
         div(

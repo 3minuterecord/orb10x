@@ -79,6 +79,12 @@ input:hover {
   margin-bottom:5px;
 }
 
+.pen-picture-box {
+  border-left:3px solid #F2F2F2;
+  margin-left:35px;
+  margin-top:40px;
+}
+
 .content{
   padding:20px;
 }
