@@ -110,27 +110,27 @@ body <- dashboardBody(
           div("Strengths", class = "body-heading"),
           div(
             div(tags$i(class = "fal fa-tasks fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Project & delivery management", class = "contact-text slider-middle")
+            div("Project Management & Solution Orchestration", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "far fa-database fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Data strategy & information architecture", class = "contact-text slider-middle")
+            div("Data Strategy & Information Architecture", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "fab fa-r-project fa-fw"), class = "contact-icon  slider-middle"), 
-            div("R programming & Shiny app development", class = "contact-text  slider-middle")
+            div("R Programming & Shiny App Development", class = "contact-text  slider-middle")
           ),
           div(
             div(tags$i(class = "fal fa-magic fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Machine learning & delivery of AI solutions", class = "contact-text slider-middle")
+            div("Machine Learning & AI Solution Delivery", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "fal fa-puzzle-piece fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Engineering, mathematics & problem solving", class = "contact-text slider-middle")
+            div("Engineering, Mathematics & Problem Solving", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "fal fa-pencil-ruler fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Graphic design for slides, infographics & app UIs", class = "contact-text slider-middle")
+            div("Graphic Design (Slides, Infographics & UIs)", class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
         br(),
