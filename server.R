@@ -44,13 +44,20 @@ shinyServer(function(input, output, session) {
   }, deleteFile = FALSE,)
   
   output$slideImage06 <- renderImage({
-    list(src="www/slide_CodeExample.png",
+    list(src="www/slide_AI.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Orb10x Flyer")
   }, deleteFile = FALSE,)
   
   output$slideImage07 <- renderImage({
+    list(src="www/slide_ANN.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage09 <- renderImage({
     list(src="www/slide_IDE.png",
          contentType = 'image/png',
          class = "slideImagebox",
@@ -58,7 +65,7 @@ shinyServer(function(input, output, session) {
   }, deleteFile = FALSE,)
   
   output$slideImage08 <- renderImage({
-    list(src="www/slide_AI.png",
+    list(src="www/slide_CodeExample.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Orb10x Flyer")
@@ -131,7 +138,7 @@ shinyServer(function(input, output, session) {
     ) %>% add_text(
       x = axisStart,
       y = 1.018,
-      text = "Graduated University, TUD/DIT (Ireland)",
+      text = "Graduated University, TUD/DIT (Dublin, Ireland)",
       textposition = 'bottom right',
       textfont = list(color = mainMarkerColor, size = textSize),
       type = 'scatter',

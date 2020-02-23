@@ -217,6 +217,7 @@ body <- dashboardBody(
           imageOutput("slideImage06", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage07", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage08", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage09", width = "100%", height = "290px", inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )
