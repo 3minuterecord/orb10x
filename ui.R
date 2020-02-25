@@ -18,11 +18,10 @@ delivered to teams sizes up to 15 people over 1-2 days designed to transform wor
 weeklyTasks <- data.frame(
   Task = c("Team management, coordination & peer reviews", 
            "Writing code & developing prototype solutions", 
-           "Writing proposals & responding to RFPs/ITTs", 
            "Creating marketing & communications material", 
-           "Identifying new opportunities & winning work",
-           "Evaluating new technologies, RD&I"),
-  Split = c(10, 20, 10, 10, 35, 15),
+           "Identifying opportunities, positioning & new winning work",
+           "Evaluating new technologies, ideation & RD&I"),
+  Split = c(15, 20, 10, 40, 15),
   stringsAsFactors = FALSE
 ) %>% dplyr::arrange(desc(Split))
 
@@ -107,11 +106,12 @@ body <- dashboardBody(
             div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[5]/100)*weeklyBarWidth, "px;")),
             div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[5]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
           ),
-          div(weeklyTasks$Task[6], class = "week-description-text"),
-          div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[6]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[6]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
-          ), style = "margin:15px;"
+          #div(weeklyTasks$Task[6], class = "week-description-text"),
+          #div(
+          #  div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[6]/100)*weeklyBarWidth, "px;")),
+          #  div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[6]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          #), 
+          style = "margin:15px;"
         ),
         div(style = "clear:both;"),
         # ---------------------------------------------------------------------+
@@ -121,14 +121,26 @@ body <- dashboardBody(
           div("Favourite Resources", class = "body-heading"),
           div(
             div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
-            div(span("Book: ", style = "color:#EBCA48;"), 
+            div(span("Predictive Analytics: ", style = "color:#EBCA48;"), 
                 a("www.machinelearningbook.com", href="https://www.machinelearningbook.com/", target="_blank"), 
                 class = "contact-text  slider-middle")
           ),
           div(
             div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
-            div(span("Book: ", style = "color:#EBCA48;"), 
+            div(span("Statistics: ", style = "color:#EBCA48;"), 
                 a("Elements of Statistical Learning", href="https://www.springer.com/gp/book/9780387848570", target="_blank"), 
+                class = "contact-text  slider-middle")
+          ),
+          div(
+            div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
+            div(span("Coding #1: ", style = "color:#EBCA48;"), 
+                a("Getting Real", href="https://basecamp.com/books/getting-real/", target="_blank"), 
+                class = "contact-text  slider-middle")
+          ),
+          div(
+            div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
+            div(span("Coding #2: ", style = "color:#EBCA48;"), 
+                a("Smalltalk Best Practice Patterns", href="https://www.amazon.co.uk/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X", target="_blank"), 
                 class = "contact-text  slider-middle")
           ),
           div(
