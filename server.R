@@ -57,6 +57,13 @@ shinyServer(function(input, output, session) {
          alt = "Orb10x Flyer")
   }, deleteFile = FALSE,)
   
+  output$slideImage08 <- renderImage({
+    list(src="www/slide_Study.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
   output$slideImage09 <- renderImage({
     list(src="www/slide_IDE.png",
          contentType = 'image/png',
@@ -64,7 +71,7 @@ shinyServer(function(input, output, session) {
          alt = "Orb10x Flyer")
   }, deleteFile = FALSE,)
   
-  output$slideImage08 <- renderImage({
+  output$slideImage10 <- renderImage({
     list(src="www/slide_CodeExample.png",
          contentType = 'image/png',
          class = "slideImagebox",

@@ -12,8 +12,21 @@ and delivering a wide range of AI & analytics projects across multiple industrie
 
 myCurrentRole <- "Data Science Manager"
 
-trainingDescription <- "On-site training courses in data-driven techniques, tools & strategies
+trainingDescription <- "I provide on-site training courses in data-driven techniques, tools & strategies
 delivered to teams sizes up to 15 people over 1-2 days designed to transform working practices."
+
+weeklyTasks <- data.frame(
+  Task = c("Team management, coordination & peer reviews", 
+           "Writing code & developing prototype solutions", 
+           "Writing proposals & responding to RFPs/ITTs", 
+           "Creating marketing & communications material", 
+           "Identifying new opportunities & winning work",
+           "Evaluating new technologies, RD&I"),
+  Split = c(10, 20, 10, 10, 35, 15),
+  stringsAsFactors = FALSE
+) %>% dplyr::arrange(desc(Split))
+
+weeklyBarWidth = 360
 
 header <- dashboardHeader(title = "www.ORB10X.com", titleWidth = 220)
 
@@ -41,11 +54,12 @@ body <- dashboardBody(
           div(penPicture, class = "text-description"),
           class = "pen-picture-box"
         ),
+        
         # ---------------------------------------------------------------------+
         # Contact information & content links                                  |
         # ---------------------------------------------------------------------+
         div(
-          div("Contact Me", class = "body-heading"),
+          #div("Contact Me", class = "body-heading"),
           div(
             div(tags$i(class = "fas fa-envelope fa-fw"), class = "contact-icon  slider-middle"), 
             div("jason@orb10x.com", class = "contact-text  slider-middle")
@@ -63,14 +77,43 @@ body <- dashboardBody(
             div("@Jas0nPayne", class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
+        # ---------------------------------------------------------------------+
+        # Add a section on working week                                        |
+        # ---------------------------------------------------------------------+
         div(
-          div("Training", span("", class = "heading-note"), class = "body-heading"),
-          div(trainingDescription, class = "text-description"),
+          div("My Typical Week", class = "body-heading"),
+          div(weeklyTasks$Task[1], class = "week-description-text"),
           div(
-            div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[1]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[1]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          ),
+          div(weeklyTasks$Task[2], class = "week-description-text"),
+          div(
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[2]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[2]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          ),
+          div(weeklyTasks$Task[3], class = "week-description-text"),
+          div(
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[3]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[3]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          ),
+          div(weeklyTasks$Task[4], class = "week-description-text"),
+          div(
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[4]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[4]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          ),
+          div(weeklyTasks$Task[5], class = "week-description-text"),
+          div(
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[5]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[5]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          ),
+          div(weeklyTasks$Task[6], class = "week-description-text"),
+          div(
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[6]/100)*weeklyBarWidth, "px;")),
+            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[6]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
           ), style = "margin:15px;"
         ),
-        br(),
+        div(style = "clear:both;"),
         # ---------------------------------------------------------------------+
         # Add a section on favourite resources, e.g. books, podcasts, websites |
         # ---------------------------------------------------------------------+
@@ -80,6 +123,12 @@ body <- dashboardBody(
             div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
             div(span("Book: ", style = "color:#EBCA48;"), 
                 a("www.machinelearningbook.com", href="https://www.machinelearningbook.com/", target="_blank"), 
+                class = "contact-text  slider-middle")
+          ),
+          div(
+            div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
+            div(span("Book: ", style = "color:#EBCA48;"), 
+                a("Elements of Statistical Learning", href="https://www.springer.com/gp/book/9780387848570", target="_blank"), 
                 class = "contact-text  slider-middle")
           ),
           div(
@@ -131,7 +180,7 @@ body <- dashboardBody(
                 class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
-        br(),
+        #br(),
         # ---------------------------------------------------------------------+
         # Add a section on personal strengths                                  |
         # ---------------------------------------------------------------------+
@@ -139,7 +188,7 @@ body <- dashboardBody(
           div("Strengths", class = "body-heading"),
           div(
             div(tags$i(class = "fal fa-tasks fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Project Management & Solution Orchestration", class = "contact-text slider-middle")
+            div("Project Management & Solution Design", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "far fa-database fa-fw"), class = "contact-icon slider-middle" ), 
@@ -159,40 +208,46 @@ body <- dashboardBody(
           ),
           div(
             div(tags$i(class = "fal fa-trophy-alt fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Scoping & Winning New work", class = "contact-text slider-middle")
+            div("Scoping & Winning Work", class = "contact-text slider-middle")
           ),
           div(
             div(tags$i(class = "fal fa-pencil-ruler fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Graphic Design (Slides, Infographics & UIs)", class = "contact-text slider-middle")
+            div("Visual & Graphic Design (Slides, Infographics, UI/UX)", class = "contact-text slider-middle")
           ), style = "margin:15px;"
         ),
-        br(),
         # ---------------------------------------------------------------------+
         # Add a section on personal interests                                  |
         # ---------------------------------------------------------------------+
         div(
-          div("Passions", class = "body-heading"),
+          div("Training?", span("", class = "heading-note"), class = "body-heading"),
+          div(trainingDescription, class = "text-description"),
           div(
-            div(tags$i(class = "fas fa-running fa-fw"), class = "contact-icon  slider-middle"), 
-            div("Running trails, hills & mountains", class = "contact-text  slider-middle")
-          ),
-          div(
-            div(tags$i(class = "fal fa-guitar-electric fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Playing guitar & listening to music", class = "contact-text slider-middle")
-          ),
-          div(
-            div(tags$i(class = "far fa-film fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Movies, documentaries & series", class = "contact-text slider-middle")
-          ),
-          div(
-            div(tags$i(class = "fal fa-dog-leashed fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Walking my dog", class = "contact-text slider-middle")
-          ),
-          div(
-            div(tags$i(class = "fal fa-child fa-fw"), class = "contact-icon slider-middle" ), 
-            div("Raising my children", class = "contact-text slider-middle")
+            div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
           ), style = "margin:15px;"
         ),
+        # div(
+        #   div("Passions", class = "body-heading"),
+        #   div(
+        #     div(tags$i(class = "fas fa-running fa-fw"), class = "contact-icon  slider-middle"), 
+        #     div("Running trails, hills & mountains", class = "contact-text  slider-middle")
+        #   ),
+        #   div(
+        #     div(tags$i(class = "fal fa-guitar-electric fa-fw"), class = "contact-icon slider-middle" ), 
+        #     div("Playing & listening to music", class = "contact-text slider-middle")
+        #   ),
+        #   div(
+        #     div(tags$i(class = "far fa-film fa-fw"), class = "contact-icon slider-middle" ), 
+        #     div("Movies, documentaries & series", class = "contact-text slider-middle")
+        #   ),
+        #   div(
+        #     div(tags$i(class = "fal fa-dog-leashed fa-fw"), class = "contact-icon slider-middle" ), 
+        #     div("Walking my dog", class = "contact-text slider-middle")
+        #   ),
+        #   div(
+        #     div(tags$i(class = "fal fa-child fa-fw"), class = "contact-icon slider-middle" ), 
+        #     div("Raising my children", class = "contact-text slider-middle")
+        #   ), style = "margin:15px;"
+        # ),
       ), div("end of page", style = "color:#282923;"), class = "sidebar-float"
     ), class="wrap"
   ),
@@ -264,6 +319,7 @@ body <- dashboardBody(
           imageOutput("slideImage07", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage08", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage09", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage10", width = "100%", height = "290px", inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )

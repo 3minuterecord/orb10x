@@ -169,6 +169,30 @@ input:hover {
   vertical-align:middle
 }
 
+.week-description-text {
+  color:#F2F2F2;
+  font-weight:300;
+  font-size:14px;
+  margin-top:15px;
+  margin-left:35px;
+  margin-bottom:10px;
+}
+
+.left-bar {
+  height:5px;
+  background:#EBCA48;
+  display:inline-block;
+  vertical-align:top;  
+}
+
+.right-bar {
+  height:5px;
+  background:#2C2D27;
+  display:inline-block;
+  vertical-align:top;
+  margin-left: -4px;
+}
+
 .contact-text{
   color:#F2F2F2;
   font-weight:300;
