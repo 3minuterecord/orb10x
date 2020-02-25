@@ -6,7 +6,7 @@ wrap  {
 }
 
 .wrap .inner {
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@ wrap  {
   float: left;
   margin-right: 15px;
   height:100%;
-  width:460px;
+  width:450px;
   background-color:#282923;
   margin-left:5px;
 }
@@ -25,7 +25,7 @@ wrap  {
 }
 
 .main {
-  margin-left: 480px; /* Controls start of right hand main panel */
+  margin-left: 470px; /* Controls start of right hand main panel */
 }
 
 input {
@@ -203,7 +203,7 @@ input:hover {
 
 .side-panel {
   height:100%;
-  width:460px;
+  width:450px;
   background-color:#282923;
   margin-left:5px;
 }
@@ -302,7 +302,7 @@ input:hover {
 }
 
 .slideImagebox {
-  height:290px;
+  height:234px;
   margin:10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }

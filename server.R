@@ -65,14 +65,49 @@ shinyServer(function(input, output, session) {
   }, deleteFile = FALSE,)
   
   output$slideImage09 <- renderImage({
-    list(src="www/slide_IDE.png",
+    list(src="www/slide_Domains.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Orb10x Flyer")
   }, deleteFile = FALSE,)
   
   output$slideImage10 <- renderImage({
+    list(src="www/slide_IDE.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage11 <- renderImage({
     list(src="www/slide_CodeExample.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage12 <- renderImage({
+    list(src="www/slide_Auto.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage13 <- renderImage({
+    list(src="www/slide_DA.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage14 <- renderImage({
+    list(src="www/slide_Open.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Orb10x Flyer")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage15 <- renderImage({
+    list(src="www/slide_Interesting.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Orb10x Flyer")

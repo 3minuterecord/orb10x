@@ -19,9 +19,9 @@ weeklyTasks <- data.frame(
   Task = c("Team management, coordination & peer reviews", 
            "Writing code & developing prototype solutions", 
            "Creating marketing & communications material", 
-           "Identifying opportunities, positioning & new winning work",
-           "Evaluating new technologies, ideation & RD&I"),
-  Split = c(15, 20, 10, 40, 15),
+           "Identifying opportunities & winning new work",
+           "Evaluating new technologies & designing solutions"),
+  Split = c(9, 23, 10, 35, 13),
   stringsAsFactors = FALSE
 ) %>% dplyr::arrange(desc(Split))
 
@@ -332,6 +332,11 @@ body <- dashboardBody(
           imageOutput("slideImage08", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage09", width = "100%", height = "290px", inline = TRUE),
           imageOutput("slideImage10", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage11", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage12", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage13", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage14", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage15", width = "100%", height = "290px", inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )
