@@ -322,7 +322,7 @@ body <- dashboardBody(
       # Sample slides / content                                              |
       # ---------------------------------------------------------------------+
       div(
-        div("SAMPLE SLIDES", class = "heading01"),
+        div("SLIDES & NOTES", class = "heading01"),
         div(
           imageOutput("slideImage01", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage02", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
@@ -341,6 +341,8 @@ body <- dashboardBody(
           imageOutput("slideImage15", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage16", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage17", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage18", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage19", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )

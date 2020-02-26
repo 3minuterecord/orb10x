@@ -79,7 +79,7 @@ shinyServer(function(input, output, session) {
   }, deleteFile = FALSE,)
   
   output$slideImage11 <- renderImage({
-    list(src="www/slide_CodeExample.png",
+    list(src="www/slide_Thinking.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Slide Thumbnail")
@@ -100,7 +100,7 @@ shinyServer(function(input, output, session) {
   }, deleteFile = FALSE,)
   
   output$slideImage14 <- renderImage({
-    list(src="www/slide_Open.png",
+    list(src="www/slide_Platform.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Slide Thumbnail")
@@ -122,6 +122,20 @@ shinyServer(function(input, output, session) {
   
   output$slideImage17 <- renderImage({
     list(src="www/slide_IDE.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage18 <- renderImage({
+    list(src="www/slide_CodeExample.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage19 <- renderImage({
+    list(src="www/slide_Open.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Slide Thumbnail")
