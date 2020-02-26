@@ -10,22 +10,24 @@ I have over 20 years experience in delivery of engineering, digital and technolo
 I have specialized in data science, managing Wood's centre of excellence for data analytics (located in Ireland) 
 and delivering a wide range of AI & analytics projects across multiple industries and business functions."
 
-myCurrentRole <- "Data Science Manager"
+CURRENT_ROLE <- "Data Science Manager"
 
 trainingDescription <- "I provide on-site training courses in data-driven techniques, tools & strategies
 delivered to teams sizes up to 15 people over 1-2 days designed to transform working practices."
 
 weeklyTasks <- data.frame(
-  Task = c("Team management, coordination & peer reviews", 
-           "Writing code & developing prototype solutions", 
+  Task = c("Team management, coordination & peer/solution reviews", 
+           "Writing code & developing data-driven solutions", 
            "Creating marketing & communications material", 
            "Identifying opportunities & winning new work",
-           "Evaluating new technologies & designing solutions"),
+           "Researching & evaluating new technologies"),
   Split = c(9, 23, 10, 35, 13),
   stringsAsFactors = FALSE
 ) %>% dplyr::arrange(desc(Split))
 
-weeklyBarWidth = 360
+SLIDE_HEIGHT <- "290px"
+
+WEEKLY_BAR_WIDTH = 360
 
 header <- dashboardHeader(title = "www.ORB10X.com", titleWidth = 220)
 
@@ -45,7 +47,7 @@ body <- dashboardBody(
         div(img(src="my_circle_pic.png", height="140px"), class = "sliderPanel person-pic"),
         div(
           div("Jason Payne", class = "person-name"),
-          div(myCurrentRole, class = "person-role"),
+          div(CURRENT_ROLE, class = "person-role"),
           class = "sliderPanel"
         ),
         div(
@@ -80,36 +82,36 @@ body <- dashboardBody(
         # Add a section on working week                                        |
         # ---------------------------------------------------------------------+
         div(
-          div("My Typical Week", class = "body-heading"),
+          div("Current Role", class = "body-heading"),
           div(weeklyTasks$Task[1], class = "week-description-text"),
           div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[1]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[1]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[1]/100)*WEEKLY_BAR_WIDTH, "px;")),
+            div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[1]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           ),
           div(weeklyTasks$Task[2], class = "week-description-text"),
           div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[2]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[2]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[2]/100)*WEEKLY_BAR_WIDTH, "px;")),
+            div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[2]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           ),
           div(weeklyTasks$Task[3], class = "week-description-text"),
           div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[3]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[3]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[3]/100)*WEEKLY_BAR_WIDTH, "px;")),
+            div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[3]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           ),
           div(weeklyTasks$Task[4], class = "week-description-text"),
           div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[4]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[4]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[4]/100)*WEEKLY_BAR_WIDTH, "px;")),
+            div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[4]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           ),
           div(weeklyTasks$Task[5], class = "week-description-text"),
           div(
-            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[5]/100)*weeklyBarWidth, "px;")),
-            div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[5]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+            div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[5]/100)*WEEKLY_BAR_WIDTH, "px;")),
+            div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[5]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           ),
           #div(weeklyTasks$Task[6], class = "week-description-text"),
           #div(
-          #  div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[6]/100)*weeklyBarWidth, "px;")),
-          #  div(class = "right-bar", style = paste0("width:", (weeklyBarWidth - (weeklyTasks$Split[6]/100)*weeklyBarWidth), "px;")), style = "margin-left:35px;height:5px;"
+          #  div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[6]/100)*WEEKLY_BAR_WIDTH, "px;")),
+          #  div(class = "right-bar", style = paste0("width:", (WEEKLY_BAR_WIDTH - (weeklyTasks$Split[6]/100)*WEEKLY_BAR_WIDTH), "px;")), style = "margin-left:35px;height:5px;"
           #), 
           style = "margin:15px;"
         ),
@@ -322,21 +324,23 @@ body <- dashboardBody(
       div(
         div("SAMPLE SLIDES", class = "heading01"),
         div(
-          imageOutput("slideImage01", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage02", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage03", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage04", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage05", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage06", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage07", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage08", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage09", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage10", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage11", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage12", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage13", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage14", width = "100%", height = "290px", inline = TRUE),
-          imageOutput("slideImage15", width = "100%", height = "290px", inline = TRUE),
+          imageOutput("slideImage01", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage02", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage03", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage04", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage05", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage06", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage07", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage08", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage09", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage10", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage11", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage12", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage13", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage14", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage15", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage16", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage17", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )

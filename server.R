@@ -5,112 +5,126 @@ shinyServer(function(input, output, session) {
     list(src="www/flyer.png",
          contentType = 'image/png',
          class = "bigImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
 
   output$slideImage01 <- renderImage({
     list(src="www/slide_AIdivide.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage02 <- renderImage({
     list(src="www/slide_Crisp.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage03 <- renderImage({
     list(src="www/slide_Gain.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage04 <- renderImage({
     list(src="www/slide_insight.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage05 <- renderImage({
     list(src="www/slide_DataToValue.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage06 <- renderImage({
     list(src="www/slide_AI.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage07 <- renderImage({
     list(src="www/slide_ANN.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage08 <- renderImage({
     list(src="www/slide_Study.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage09 <- renderImage({
     list(src="www/slide_Domains.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage10 <- renderImage({
-    list(src="www/slide_IDE.png",
+    list(src="www/slide_Decision.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage11 <- renderImage({
     list(src="www/slide_CodeExample.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage12 <- renderImage({
     list(src="www/slide_Auto.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage13 <- renderImage({
     list(src="www/slide_DA.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage14 <- renderImage({
     list(src="www/slide_Open.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   output$slideImage15 <- renderImage({
     list(src="www/slide_Interesting.png",
          contentType = 'image/png',
          class = "slideImagebox",
-         alt = "Orb10x Flyer")
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage16 <- renderImage({
+    list(src="www/slide_Color.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImage17 <- renderImage({
+    list(src="www/slide_IDE.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
   # Read in timeline data
