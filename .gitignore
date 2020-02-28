@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Passwords
 password.json
+
+# slides
+slides

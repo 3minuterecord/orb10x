@@ -82,7 +82,7 @@ body <- dashboardBody(
         # Add a section on working week                                        |
         # ---------------------------------------------------------------------+
         div(
-          div("Current Role", class = "body-heading"),
+          div("My Current Role", class = "body-heading"),
           div(weeklyTasks$Task[1], class = "week-description-text"),
           div(
             div(class = "left-bar", style = paste0("width:", (weeklyTasks$Split[1]/100)*WEEKLY_BAR_WIDTH, "px;")),
@@ -322,7 +322,7 @@ body <- dashboardBody(
       # Sample slides / content                                              |
       # ---------------------------------------------------------------------+
       div(
-        div("SLIDES & NOTES", class = "heading01"),
+        div("SLIDES & NOTES", span("(by orb10x)", class = "heading-note"), class = "heading01"),
         div(
           imageOutput("slideImage01", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage02", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
@@ -343,6 +343,9 @@ body <- dashboardBody(
           imageOutput("slideImage17", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage18", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           imageOutput("slideImage19", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage20", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage21", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+          imageOutput("slideImage22", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
           br(),
         style = "width:100%;margin-left:15px;"
         )
