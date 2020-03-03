@@ -360,6 +360,8 @@ body <- dashboardBody(
           div(img(src="orb10x_Long_Light_Medium.svg", height = 25), class="logo-image")
         ), br(), style = "margin:15px;"
       ),
+      # Simple hit counter (reading from SQL database)
+      uiOutput("showHitCount"),
     ), class = "sidebar-float"
   ), 
   # ---------------------------------------------------------------------+

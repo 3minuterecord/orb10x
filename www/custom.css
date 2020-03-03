@@ -297,6 +297,15 @@ input:hover {
   vertical-align:top;
 }
 
+.hit-counter {
+  color:#FFFFFF;
+  margin:25px;
+  padding:8px;
+  border: 2px solid #EBCA48;
+  border-radius: 5px;
+  margin-right:275px;
+}
+
 .hovertext text {
   font-size: 12px !important;
   font-family:Calibri,sans-serif !important;

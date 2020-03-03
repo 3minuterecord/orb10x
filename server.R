@@ -1,4 +1,33 @@
+source("global.R")
+source("db.R")
+
 shinyServer(function(input, output, session) {
+  
+  # Record the hit on the app in the app's database (SQL azure)
+  DATABASE <- "orb10x_gen"
+  
+  # Write a new row to the hit counter log and get the latest count
+  hitCountData <- reactive({
+    conPool <- getDbPool(DATABASE)
+    con <- poolCheckout(conPool)
+    
+    # Only write to hit log if running on shinyapps.io
+    if(runningOnShinyApps()){
+      hitData <- data.frame(Hit = 1, HitTimestamp = Sys.time())
+      dbWriteTable(con, name = "HitLog", value = hitData, append = TRUE)
+    }
+    
+    # Get the latest count
+    query <- "SELECT COUNT(*) FROM HitLog"
+    data <- dbGetQuery(con, query)
+    poolReturn(con)
+    return(data)
+  })
+  
+  # output the hit count
+  output$showHitCount <- renderUI({
+    div(paste0("Site Hits ", format(hitCountData(), big.mark = ",")), class = "hit-counter")
+  })
   
   # Create a render of the flyer
   output$flyerImage <- renderImage({
