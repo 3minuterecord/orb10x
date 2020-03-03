@@ -206,8 +206,14 @@ body <- dashboardBody(
         ),
         div(
           div(tags$i(class = "fal fa-chalkboard-teacher fa-fw"), class = "contact-icon slider-middle" ), 
+          div(span("MOOC: ", style = "color:#EBCA48;"), 
+              a("Deep Learning, Andrew Ng / Coursera", href="https://www.coursera.org/specializations/deep-learning/", target="_blank"), 
+              class = "contact-text slider-middle")
+        ),
+        div(
+          div(tags$i(class = "fal fa-chalkboard-teacher fa-fw"), class = "contact-icon slider-middle" ), 
           div(span("Tutorials: ", style = "color:#EBCA48;"), 
-              a("Data Camp", href="https://www.datacamp.com/", target="_blank"), 
+              a("Data Camp (R, Python & SQL coding)", href="https://www.datacamp.com/", target="_blank"), 
               class = "contact-text slider-middle")
         ), style = "margin:15px;"
       ),
@@ -218,11 +224,11 @@ body <- dashboardBody(
         div("Strengths", class = "body-heading"),
         div(
           div(tags$i(class = "fal fa-tasks fa-fw"), class = "contact-icon slider-middle" ), 
-          div("Project management & solution design", class = "contact-text slider-middle")
+          div("Project management & digital transformation", class = "contact-text slider-middle")
         ),
         div(
           div(tags$i(class = "far fa-database fa-fw"), class = "contact-icon slider-middle" ), 
-          div("Data strategy & information architecture", class = "contact-text slider-middle")
+          div("Data strategy & cloud infrastructure", class = "contact-text slider-middle")
         ),
         div(
           div(tags$i(class = "fab fa-r-project fa-fw"), class = "contact-icon  slider-middle"), 
@@ -242,8 +248,107 @@ body <- dashboardBody(
         ),
         div(
           div(tags$i(class = "fal fa-pencil-ruler fa-fw"), class = "contact-icon slider-middle" ), 
-          div("Visual & Graphic Design (Slides, Infographics, UI/UX)", class = "contact-text slider-middle")
+          div("Visual & Graphic Design (slides, infographics, UI/UX)", class = "contact-text slider-middle")
         ), style = "margin:15px;"
+      ),
+      # ---------------------------------------------------------------------+
+      # Add a section on professional experience                             |
+      # ---------------------------------------------------------------------+
+      div(
+        div("Experience", class = "body-heading"),
+        div(
+          div("Head of AI & Analytics", class = "sub-heading"),
+          div("Wood ", a("(www.woodplc.com)", href="https://www.woodplc.com/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("June 2019 - Present", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Galway, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Tactical execution of data-driven projects", class = "experience-text")),
+          tags$ul(tags$li("Data collection, storage & access strategies", class = "experience-text")),
+          tags$ul(tags$li("Bid team support (content, case studies, method statements) for winning work", class = "experience-text")),
+          tags$ul(tags$li("Client demos & bid presentations (data-driven transformation)", class = "experience-text")),
+          tags$ul(tags$li("Lead for global community of practice for data science", class = "experience-text"))
+        ),
+        div(
+          div("Data Science Manager", class = "sub-heading-divide"),
+          div("Wood ", a("(www.woodplc.com)", href="https://www.woodplc.com/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Feb 2015 - Present", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Galway, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Run a global centre of excellence for AI & analytics (set up in Sep 2016)", class = "experience-text")),
+          tags$ul(tags$li("Identify & collaborate with our global data science & SME community", class = "experience-text")),
+          tags$ul(tags$li("Identify opportunities for data science value-add within Wood", class = "experience-text")),
+          tags$ul(tags$li("Coordinate recruitment for data science & related skills", class = "experience-text"))
+        ),
+        div(
+          div("Senior Project / Engineering Manager", class = "sub-heading-divide"),
+          div("Wood ", a("(www.woodplc.com)", href="https://www.woodplc.com/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("June 2019 - Present", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Galway, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Egina UFR lead for in-country UFR basic engineering (Nigeria)", class = "experience-text")),
+          tags$ul(tags$li("Delivery manager for Hadera gas import terminal (offshore Israel)", class = "experience-text")),
+          tags$ul(tags$li("Project manager & technical lead for SLARP Joint industry project", class = "experience-text")),
+          tags$ul(tags$li("Technical oversight & scope verification for SWRP OIE (structures)", class = "experience-text"))
+        ),
+        div(
+          div("Senior Structural Engineer", class = "sub-heading-divide"),
+          div("DBFL Consulting Engineers ", a("(www.dbfl.ie)", href="https://www.dbfl.ie/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("June 2008 - Sept 2008", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Dublin, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Senior structural engineer for residential & commerical buildings", class = "experience-text"))
+        ),
+        div(
+          div("Senior Structural Engineer", class = "sub-heading-divide"),
+          div("Horganlynch Consulting Engineers ", a("(www.horganlynch.ie)", href="https://www.horganlynch.ie/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("July 2007 - June 2008", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Dublin, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Civil & structural design for education, sports & commerical buildings", class = "experience-text"))
+        ),
+        div(
+          div("Associate Director", class = "sub-heading-divide"),
+          div("Kilgallen & Partners ", a("(kilgallen.ie)", href="http://kilgallen.ie/", target="_blank"), class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Nov 2003 - July 2007", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Laois, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Civil & structural design for education, industrial & commerical buildings", class = "experience-text"))
+        ),
+        div(
+          div("Senior Riser Global Analysis Engineer", class = "sub-heading-divide"),
+          div("Marine Computation Services (MCS)", class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Nov 2000 - Nov 2003", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Galway, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Statistical analysis of riser global analysis data", class = "experience-text")),
+          tags$ul(tags$li("Riser system finite element analysis (time & frequency domain)", class = "experience-text")),
+          tags$ul(tags$li("Development of VBA apps for data handling & processing", class = "experience-text"))
+        ),
+        div(
+          div("Structural Engineer", class = "sub-heading-divide"),
+          div("OCSC Consulting Engineers", class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Sep 1999 - Oct 2000", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("Dublin, Ireland", class = "date-text slider-middle"),
+          tags$ul(tags$li("Structural design of medium-large scale residential buildings", class = "experience-text"))
+        ),
+        div(
+          div("Structural Engineer", class = "sub-heading-divide"),
+          div("Michael Barclay Partnership", class = "sub-bold-heading"),
+          div(tags$i(class = "fal fa-calendar-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("June 1998 - May 1999", class = "date-text slider-middle"),
+          div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
+          div("London, UK", class = "date-text slider-middle"),
+          tags$ul(tags$li("Structural engineer for several conservation/heritage projects", class = "experience-text"))
+        ),style = "margin:15px;"
       ),
       # ---------------------------------------------------------------------+
       # Add a section on personal interests                                  |
@@ -260,11 +365,12 @@ body <- dashboardBody(
   # ---------------------------------------------------------------------+
   # Career milestone timeline                                            |
   # ---------------------------------------------------------------------+
-  div( 
+  div(
     div("MILESTONES", span("(hover over blocks for details...)", class = "heading-note"), class = "heading01"),
     div(
-      plotlyOutput("careerTimeline", width = "95%", height = '125px')
-    ), style = "margin-left: 455px;"
+      plotlyOutput("careerTimeline", width = "93%", height = '125px'), style = "overflow: auto;" # overflow used to 
+      # avoid chart overlapping with sidebar
+    )
   ),
   # ---------------------------------------------------------------------+
   # Recent Projects of Interest tiles / boxes                            |
@@ -320,30 +426,30 @@ body <- dashboardBody(
       imageOutput("slideImageAIdivide", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageStudies", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageInsight", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageGain", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageCrisp", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageInteresting", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDesignThinking", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageCrisp", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageGain", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageTransML", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageAI", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageANN", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDeepLearning", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageCNN", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDecisions", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageFeatureEng", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageAutoML", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageMaturity", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImagePlatform", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageIA", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageOpenSource", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDA", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDomains", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageColor", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageIDE", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageTransDataArch", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageOpenSource", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageInteresting", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImagePlatform", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageMaturity", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageIA", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageBigData", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageCodeExample", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDataToValue", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageFeatureEng", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageBigData", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       br(),
       style = "width:100%;margin-left:0px;"
     ), style = "margin-left:46px;"

@@ -314,7 +314,7 @@ shinyServer(function(input, output, session) {
     ) %>% layout(
       plot_bgcolor='#ECF0F5',
       paper_bgcolor='#ECF0F5',
-      margin = list(l = 30, t = 5, b = 0, pad = 0),
+      margin = list(l = 0, t = 5, b = 0, pad = 0),
       font = list(size = 10),
       xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE, range = c(axisStart, axisEnder)),
       yaxis = list(title = (""), zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE),
