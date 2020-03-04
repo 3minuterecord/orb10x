@@ -9,7 +9,7 @@
   float: left;
   margin-right: 25px;
   height: 100%;
-  width: 450px;
+  width: 425px;
   background-color: #201F1A; 
   margin-left:5px;
   margin-bottom:50px;
@@ -47,6 +47,10 @@ input:hover {
   margin-bottom:10px;
   padding:10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-box:hover{
+  border-left: 5px solid #EBCA48;
 }
 
 .box-heading01 {
@@ -222,12 +226,24 @@ input:hover {
   margin-right:25px;
 }
 
+.contact-text:hover {
+  color:#EBCA48;
+}
+
+.week-description-text:hover {
+  color:#EBCA48;
+}
+
 .experience-text {
   color:#F2F2F2;
   font-weight:300;
   font-size:12px;
   margin-top:6px;
   margin-left:15px;
+}
+
+.experience-text:hover {
+  color:#EBCA48;
 }
 
 .date-text {
@@ -353,6 +369,10 @@ input:hover {
   margin-right:15px;
   margin-bottom:10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.slideImagebox:hover {
+  border: 2px solid #EBCA48;
 }
 
 .bigImagebox {

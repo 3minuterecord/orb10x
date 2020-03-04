@@ -4,22 +4,22 @@ source('global.R')
 projects <- read.csv("data/projectsData.csv", stringsAsFactors = FALSE)
 names(projects)[1] <- "Name"
 
-penPicture <- "I'm currently Head of Data Science for Wood and Analytics Manager for Wood Ireland.  
+penPicture <- "I'm currently Head of Data Science for Wood & Analytics Manager for Wood Ireland.  
 I have a Bachelor of Science degree and Diploma in Structural Engineering from Technology University Dublin. 
-I have over 20 years experience in delivery of engineering, digital and technology projects.  In the last 5 years, 
+I have over 20 years of experience in delivering engineering, digital and technology projects.  In the last 5 years, 
 I have specialized in data science, managing Wood's centre of excellence for data analytics (located in Ireland) 
 and delivering a wide range of AI & analytics projects across multiple industries and business functions."
 
 CURRENT_ROLE <- "Data Science Manager"
 
-trainingDescription <- "I provide on-site training courses in data-driven techniques, tools & strategies
+trainingDescription <- "I can provide on-site training courses in data-driven techniques, tools & strategies
 delivered to teams sizes up to 15 people over 1-2 days designed to transform working practices."
 
 weeklyTasks <- data.frame(
   Task = c("Team management, coordination & peer/solution reviews", 
            "Writing code & developing data-driven solutions", 
            "Creating marketing & communications material", 
-           "Identifying opportunities & winning new work",
+           "Advising on & identifying new opportunities",
            "Researching & evaluating new technologies"),
   Split = c(9, 23, 10, 35, 13),
   stringsAsFactors = FALSE
@@ -27,7 +27,7 @@ weeklyTasks <- data.frame(
 
 SLIDE_HEIGHT <- "290px"
 
-WEEKLY_BAR_WIDTH = 360
+WEEKLY_BAR_WIDTH = 340
 
 header <- dashboardHeader(title = "www.ORB10X.com", titleWidth = 220)
 
@@ -122,7 +122,7 @@ body <- dashboardBody(
         div("Education & Certification", class = "body-heading"),
         div(
           div(tags$i(class = "fal fa-university fa-fw"), class = "contact-icon  slider-middle"), 
-          div("BSc Engineering Science, TUD (1994-1998)" , class = "contact-text  slider-middle")
+          div("BSc (Engineering), TUD (1994-1998)" , class = "contact-text  slider-middle")
         ),
         div(
           div(tags$i(class = "fal fa-diploma fa-fw"), class = "contact-icon  slider-middle"), 
@@ -140,7 +140,7 @@ body <- dashboardBody(
         div("Favourite Resources", class = "body-heading"),
         div(
           div(tags$i(class = "fal fa-book fa-fw"), class = "contact-icon  slider-middle"), 
-          div(span("Predictive Analytics: ", style = "color:#EBCA48;"), 
+          div(span("ML Basics: ", style = "color:#EBCA48;"), 
               a("www.machinelearningbook.com", href="https://www.machinelearningbook.com/", target="_blank"), 
               class = "contact-text  slider-middle")
         ),
@@ -263,10 +263,10 @@ body <- dashboardBody(
           div("June 2019 - Present", class = "date-text slider-middle"),
           div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
           div("Galway, Ireland", class = "date-text slider-middle"),
-          tags$ul(tags$li("Tactical execution of data-driven projects", class = "experience-text")),
-          tags$ul(tags$li("Data collection, storage & access strategies", class = "experience-text")),
-          tags$ul(tags$li("Bid team support (content, case studies, method statements) for winning work", class = "experience-text")),
-          tags$ul(tags$li("Client demos & bid presentations (data-driven transformation)", class = "experience-text")),
+          tags$ul(tags$li("Advising on data-driven projects & initiatives", class = "experience-text")),
+          tags$ul(tags$li("Working to improve & enrich Wood's data value chain", class = "experience-text")),
+          tags$ul(tags$li("Providing bid support (content, case studies, method statements)", class = "experience-text")),
+          tags$ul(tags$li("Delivering client demos & presentations", class = "experience-text")),
           tags$ul(tags$li("Lead for global community of practice for data science", class = "experience-text"))
         ),
         div(
@@ -276,10 +276,10 @@ body <- dashboardBody(
           div("Feb 2015 - Present", class = "date-text slider-middle"),
           div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
           div("Galway, Ireland", class = "date-text slider-middle"),
-          tags$ul(tags$li("Run a global centre of excellence for AI & analytics (set up in Sep 2016)", class = "experience-text")),
-          tags$ul(tags$li("Identify & collaborate with our global data science & SME community", class = "experience-text")),
-          tags$ul(tags$li("Identify opportunities for data science value-add within Wood", class = "experience-text")),
-          tags$ul(tags$li("Coordinate recruitment for data science & related skills", class = "experience-text"))
+          tags$ul(tags$li("Running a global centre of excellence for AI & analytics", class = "experience-text")),
+          tags$ul(tags$li("Executing data science proofs-of-concept & proofs-of-value", class = "experience-text")),
+          tags$ul(tags$li("Collaborating with our global data science & SME community", class = "experience-text")),
+          tags$ul(tags$li("Coordinating recruitment of data science & related skills", class = "experience-text"))
         ),
         div(
           div("Senior Project / Engineering Manager", class = "sub-heading-divide"),
@@ -318,7 +318,7 @@ body <- dashboardBody(
           div("Nov 2003 - July 2007", class = "date-text slider-middle"),
           div(tags$i(class = "fal fa-map-marker-alt fa-fw"), class = "experience-icon slider-middle" ),
           div("Laois, Ireland", class = "date-text slider-middle"),
-          tags$ul(tags$li("Civil & structural design for education, industrial & commerical buildings", class = "experience-text"))
+          tags$ul(tags$li("Civil & structural design for industrial & commerical buildings", class = "experience-text"))
         ),
         div(
           div("Senior Riser Global Analysis Engineer", class = "sub-heading-divide"),
@@ -423,15 +423,19 @@ body <- dashboardBody(
   # ---------------------------------------------------------------------+
   div(
     div(
-      div("SLIDES & NOTES", span("(by orb10x)", class = "heading-note"), class = "heading01"),
+      div("SLIDES & NOTES", span("(Taster slides by orb10x)", class = "heading-note"), class = "heading01"),
+      # Intro teaser slides
       imageOutput("slideImageIntro", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageAIdivide", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageStudies", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageInsight", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageExpectation", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageInteresting", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDesignThinking", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageDomains", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageCrisp", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageGain", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      # Machine learning teaser slides
       imageOutput("slideImageTransML", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageAI", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageANN", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
@@ -440,18 +444,23 @@ body <- dashboardBody(
       imageOutput("slideImageDecisions", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageFeatureEng", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageAutoML", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageOpenSource", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDA", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageDomains", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageColor", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageIDE", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      # Data architecture teaser slides
       imageOutput("slideImageTransDataArch", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImagePlatform", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageMaturity", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageIA", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageBigData", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
-      imageOutput("slideImageCodeExample", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageDataAccess", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       imageOutput("slideImageDataToValue", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      # Data visualization teaser slides
+      imageOutput("slideImageTransViz", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageColor", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      # Tools & other teaser slides
+      imageOutput("slideImageTransTools", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageIDE", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageOpenSource", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
+      imageOutput("slideImageCodeExample", width = "100%", height = SLIDE_HEIGHT, inline = TRUE),
       br(),
       style = "width:100%;margin-left:0px;"
     ), style = "margin-left:46px;"

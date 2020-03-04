@@ -44,6 +44,27 @@ shinyServer(function(input, output, session) {
          alt = "Slide Thumbnail")
   }, deleteFile = FALSE,)
   
+  output$slideImageTransTools <- renderImage({
+    list(src="slides/slide_TransToTools.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImageTransViz <- renderImage({
+    list(src="slides/slide_TransToViz.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImageDataAccess <- renderImage({
+    list(src="slides/slide_DataAccess.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
   output$slideImageTransML <- renderImage({
     list(src="slides/slide_TransToML.png",
          contentType = 'image/png',
@@ -60,6 +81,13 @@ shinyServer(function(input, output, session) {
   
   output$slideImageStudies <- renderImage({
     list(src="slides/slide_Study.png",
+         contentType = 'image/png',
+         class = "slideImagebox",
+         alt = "Slide Thumbnail")
+  }, deleteFile = FALSE,)
+  
+  output$slideImageExpectation <- renderImage({
+    list(src="slides/slide_Expectation.png",
          contentType = 'image/png',
          class = "slideImagebox",
          alt = "Slide Thumbnail")

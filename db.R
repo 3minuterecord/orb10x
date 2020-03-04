@@ -20,9 +20,9 @@ passwordDb_config <- fromJSON(file = DB_PASSWORD_FILE_NAME) # SQL database conne
 
 runningOnShinyApps <- function() {
   if (Sys.getenv('SHINY_PORT') == "") { 
-    return(FALSE)  # this app IS NOT running on shinyapps.io
+    return(FALSE)  # NOT running on shinyapps.io
   } else {
-    return(TRUE)  # this IS running on shinyapps.io
+    return(TRUE)  # Running on shinyapps.io
   }
 }
 
@@ -44,8 +44,7 @@ getServerStr <- function(server) {
 # connect to the database, use a different driver if the application is on shinyapps.io
 getDriverStr <- function() {
   if (runningOnShinyApps()) {
-    #return("FreeTDS;TDS_Version=7.0") # apparently this version doesn't support encryption? http://software.firstworks.com/2017/04/tlsssl-encryption-with-ms-sql-server.html
-    return("FreeTDS;TDS_Version=7.2") # 7.1-7.4 supposedly do, 7.2 supports varchar max? 7.3 and 7.4 didn't work on shinyapps
+    return("FreeTDS;TDS_Version=7.2") 
   } else { # local
     return(getLocalDriverODBC())  # take ODBC driver name from machine, rather than hard coding it in as it can change dependign on version of MS SQL Server Mgmt Studio
   }
